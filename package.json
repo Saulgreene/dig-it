@@ -1,0 +1,19 @@
+{
+  "name": "dig-it",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Saulgreene/dig-it.git"
+  },
+  "author": "saul greene",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Saulgreene/dig-it/issues"
+  },
+  "homepage": "https://github.com/Saulgreene/dig-it#readme"
+}
