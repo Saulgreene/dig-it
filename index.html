@@ -1,47 +1,3 @@
-<!-- <!DOCTYPE html>
-<html>
-  <head>
-    <style media="screen">
-      #map{
-        width: 80%;
-        height: 100%;
-        /*background-color: grey;*/
-      }
-    </style>
-    <meta charset="utf-8">
-
-    <title>Dig It</title>
-      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSSb5tJVoh_b3if6EdtbIH88PzMphjROE"></script>
-    <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script> -->
-    <!-- <script type="text/javascript" src="index.js"></script>
-  </head>
-  <body>
-      <h1>BIATCH</h1>
-      <div id="map"></div>
-  </body>
-  <footer>
-  <script>
-  function initMap() {
-    let myLatlng = {lat: 47.554750, lng: -122.269858};
-    let map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 5,
-      center: myLatlng
-    });
-    let marker = new google.maps.Marker({
-      position: myLatlng,
-      map: map
-    });
-    marker.addListener(map, 'click', function(event) {
-      map.setZoom(8);
-      map.setCenter(marker.getPosition());
-      // placeMarker(event.latLng);
-    });
-};
-initMap();
-  </script>
-</footer>
-</html> --> -->
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -80,8 +36,8 @@ initMap();
       }
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 8
+          center: {lat: 47.554750, lng: -122.269858},
+          zoom: 3
         });
         google.maps.event.addListener(map, 'click', function(event) {
           marker = new google.maps.Marker({position: event.latLng, map: map});
@@ -91,14 +47,17 @@ initMap();
           let newLng = findLong(newLngInput)
           console.log(event.latLng);   // Get latlong info as object.
           console.log( "Latitude: "+event.latLng.lat()+" "+", longitude: "+event.latLng.lng()); // Get separate lat long.
+          var marker = new google.maps.Marker({
+            position: {lat: newLat, lng: newLng},
+          });
+
           map = new google.maps.Map(document.getElementById('map'), {
             center: {lat: newLat, lng: newLng},
-            zoom: 8
+            zoom: 3
           });
+
         });
       }
-
-
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSSb5tJVoh_b3if6EdtbIH88PzMphjROE&callback=initMap">
